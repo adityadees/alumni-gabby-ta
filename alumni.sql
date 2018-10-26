@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Agu 2018 pada 14.54
--- Versi server: 10.1.31-MariaDB
--- Versi PHP: 7.2.3
+-- Generation Time: Oct 26, 2018 at 10:41 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `alumni`
+-- Table structure for table `alumni`
 --
 
 CREATE TABLE `alumni` (
@@ -36,7 +36,7 @@ CREATE TABLE `alumni` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `alumni`
+-- Dumping data for table `alumni`
 --
 
 INSERT INTO `alumni` (`alumni_nim`, `prodi_id`, `alumni_angkatan`, `alumni_wisuda`) VALUES
@@ -471,12 +471,13 @@ INSERT INTO `alumni` (`alumni_nim`, `prodi_id`, `alumni_angkatan`, `alumni_wisud
 ('09111403038', 802, 2012, '124'),
 ('09121303004', 803, 2012, '124'),
 ('09111403012', 803, 2012, '124'),
-('09111003056', 803, 2012, '124');
+('09111003056', 803, 2012, '124'),
+('555555555', 101, 0000, '123');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `artikel`
+-- Table structure for table `artikel`
 --
 
 CREATE TABLE `artikel` (
@@ -491,20 +492,21 @@ CREATE TABLE `artikel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `artikel`
+-- Dumping data for table `artikel`
 --
 
 INSERT INTO `artikel` (`artikel_id`, `artikel_judul`, `artikel_isi`, `artikel_jenis`, `artikel_akses`, `artikel_tanggal`, `artikel_foto`, `artikel_views`) VALUES
 (3, 'PK IT', '<p><span style=\"background-color: rgb(255, 255, 0);\">tesssss</span></p>', 'berita', 'all', '2018-07-22 23:28:40', '30023e64cf1373f9fa637186ec3da018.png', 0),
-(4, 'berita1', '<p>asdasdasdadadasdasdasd asdasdasdadadasdasdasd asdasdasdadadasdasdasd asdasdasdadadasdasdasd asdasdasdadadasdasdasd asdasdasdadadasdasdasd asdasdasdadadasdasdasd asdasdasdadadasdasdasd asdasdasdadadasdasdasd asdasdasdadadasdasdasd asdasdasdadadasdasdasd asdasdasdadadasdasdasd asdasdasdadadasdasdasd&nbsp;<br></p>', 'berita', 'all', '2018-07-23 02:37:00', '4cf44014b23e73fc790cdbb19eed52ee.png', 1),
+(4, 'berita1', '<p>tessss&nbsp;<br></p>', 'berita', 'all', '2018-08-03 19:01:17', '4cf44014b23e73fc790cdbb19eed52ee.png', 1),
 (5, 'berita 3', '<ul><li><u>asdasdad&nbsp;12312312312 123123123</u></li></ul>', 'berita', 'all', '2018-07-23 02:37:28', 'c0e7d3e6356ece3265ed8b601c520bd2.png', 2),
 (6, 'pengumuman 1', '<p>adasd12 asda</p>', 'pengumuman', 'all', '2018-07-23 02:38:33', 'af6b04351ef6c09e8f5fe9e77d04bfa2.png', 0),
-(7, 'pengumuman 2', '<p>acasac</p>', 'pengumuman', 'all', '2018-07-23 02:38:50', 'e84116ecf6cdaee9fe7cd729d8589d3d.png', 1);
+(7, 'pengumuman 2', '<p>acasac</p>', 'pengumuman', 'all', '2018-07-23 02:38:50', 'e84116ecf6cdaee9fe7cd729d8589d3d.png', 1),
+(8, 'asds', '<p>asdsad</p>', 'berita', 'all', '2018-08-03 18:56:17', '2638de35acfd02e7e1543e9ab0e19e2d.jpg', 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `artikel_views`
+-- Table structure for table `artikel_views`
 --
 
 CREATE TABLE `artikel_views` (
@@ -515,7 +517,7 @@ CREATE TABLE `artikel_views` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `artikel_views`
+-- Dumping data for table `artikel_views`
 --
 
 INSERT INTO `artikel_views` (`views_id`, `views_tanggal`, `views_ip`, `artikel_id`) VALUES
@@ -527,7 +529,7 @@ INSERT INTO `artikel_views` (`views_id`, `views_tanggal`, `views_ip`, `artikel_i
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `detail_user`
+-- Table structure for table `detail_user`
 --
 
 CREATE TABLE `detail_user` (
@@ -548,7 +550,7 @@ CREATE TABLE `detail_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `detail_user`
+-- Dumping data for table `detail_user`
 --
 
 INSERT INTO `detail_user` (`detail_kode`, `detail_nama`, `detail_email`, `detail_tel`, `detail_jk`, `detail_tgl_lahir`, `detail_tempat_lahir`, `detail_agama`, `detail_provinsi`, `detail_alamat`, `detail_facebook`, `detail_twitter`, `detail_line`, `detail_foto`) VALUES
@@ -988,12 +990,18 @@ INSERT INTO `detail_user` (`detail_kode`, `detail_nama`, `detail_email`, `detail
 ('09111003056', 'JAMILAH', 'jamilahteguh@yahoo.com', '085788494325', 'P', '1994-07-24', 'PALEMBANG', 'islam', 'Sumatera Selatan', 'Jl. Keramasan Rt. 05 Rw. 02 N0. 232', 'Jamilah Teguh S', '', '', 'team_1.jpg'),
 ('123', 'AdityaDS', 'adityads@ymail.com', '082371373347', 'L', '2018-07-23', 'jl.aaa', 'islam', 'sumatera selatan', 'jl.aaa', 'ds.aditya', 'adityadees', 'adityadees', 'team_1.jpg'),
 ('225', 'magnum', 'danielsilverw@gmail.com', '080', 'L', '0000-00-00', 'tesas', 'lainnya', '', '', 'asd', 'asd', 'asd', '57740b43f7e560ffb1472753d15c8c2a.jpg'),
-('333', 'tim tam', 'adasd@aaa.com', '222', '', '0000-00-00', '', 'buddha', '', '', 'adas', 'asd', 'asd', 'ccadd29eb705d74d20b750b3331ecea5.jpg');
+('333', 'tim tam', 'adasd@aaa.com', '222', '', '0000-00-00', '', 'buddha', '', '', 'adas', 'asd', 'asd', 'ccadd29eb705d74d20b750b3331ecea5.jpg'),
+('1241', 'tesssss', 'adityads@ymail.com', '082222', '', '0000-00-00', '', 'islam', '', '', 'aa', 'aa', 'aa', 'team_1.jpg'),
+('51251', 'asdsad', 'asdsa@aaa.com', '21312', 'L', '0000-00-00', '', 'islam', '', '', 'asd', 'asd', 'asd', 'team_1.jpg'),
+('555555555', 'asd111', 'asd@aaa.com', '123', 'L', '0000-00-00', '', 'islam', '', '', 'asd', 'ad', 'asd', 'dc6e2148067e9eead16360e18968a89b.jpg'),
+('4441', 'sd', 'asdsa@aaa.com', '082222', 'L', '0000-00-00', '', 'islam', '', '', 'asd', 'asd', 'asd', 'team_1.jpg'),
+('551', 'asd', 'asd@aaa.com', '123', 'L', '0000-00-00', '', 'islam', '', '', '123', '123', '123', '88b31af1e35c878c42b579b0e8b2c9ff.jpg'),
+('1212', 'sda', 'adityads@ymail.com', '123', 'L', '0000-00-00', '', 'islam', '', '', '123', '123', '123', '2589dfeeb8ab6bc841f3f8320520ffda.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `fakultas`
+-- Table structure for table `fakultas`
 --
 
 CREATE TABLE `fakultas` (
@@ -1002,7 +1010,7 @@ CREATE TABLE `fakultas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `fakultas`
+-- Dumping data for table `fakultas`
 --
 
 INSERT INTO `fakultas` (`fakultas_id`, `fakultas_nama`) VALUES
@@ -1020,7 +1028,7 @@ INSERT INTO `fakultas` (`fakultas_id`, `fakultas_nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gallery`
+-- Table structure for table `gallery`
 --
 
 CREATE TABLE `gallery` (
@@ -1031,7 +1039,7 @@ CREATE TABLE `gallery` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `gallery`
+-- Dumping data for table `gallery`
 --
 
 INSERT INTO `gallery` (`gallery_id`, `gallery_judul`, `gallery_deskripsi`, `gallery_foto`) VALUES
@@ -1040,7 +1048,7 @@ INSERT INTO `gallery` (`gallery_id`, `gallery_judul`, `gallery_deskripsi`, `gall
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kuisioner`
+-- Table structure for table `kuisioner`
 --
 
 CREATE TABLE `kuisioner` (
@@ -1051,7 +1059,7 @@ CREATE TABLE `kuisioner` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kuisioner`
+-- Dumping data for table `kuisioner`
 --
 
 INSERT INTO `kuisioner` (`kuisioner_id`, `kuisioner_judul`, `kuisioner_isi`, `kuisioner_akses`) VALUES
@@ -1061,7 +1069,7 @@ INSERT INTO `kuisioner` (`kuisioner_id`, `kuisioner_judul`, `kuisioner_isi`, `ku
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lokasi`
+-- Table structure for table `lokasi`
 --
 
 CREATE TABLE `lokasi` (
@@ -1072,7 +1080,7 @@ CREATE TABLE `lokasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `lokasi`
+-- Dumping data for table `lokasi`
 --
 
 INSERT INTO `lokasi` (`lokasi_id`, `lokasi_lat`, `lokasi_long`, `lokasi_alamat`) VALUES
@@ -1085,7 +1093,7 @@ INSERT INTO `lokasi` (`lokasi_id`, `lokasi_lat`, `lokasi_long`, `lokasi_alamat`)
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `partner`
+-- Table structure for table `partner`
 --
 
 CREATE TABLE `partner` (
@@ -1096,7 +1104,7 @@ CREATE TABLE `partner` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `partner`
+-- Dumping data for table `partner`
 --
 
 INSERT INTO `partner` (`partner_id`, `partner_nama`, `partner_link`, `partner_foto`) VALUES
@@ -1105,7 +1113,7 @@ INSERT INTO `partner` (`partner_id`, `partner_nama`, `partner_link`, `partner_fo
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pekerjaan`
+-- Table structure for table `pekerjaan`
 --
 
 CREATE TABLE `pekerjaan` (
@@ -1118,7 +1126,7 @@ CREATE TABLE `pekerjaan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pekerjaan`
+-- Dumping data for table `pekerjaan`
 --
 
 INSERT INTO `pekerjaan` (`pekerjaan_id`, `user_kode`, `lokasi_id`, `pekerjaan_nama`, `pekerjaan_bidang`, `pekerjaan_jabatan`) VALUES
@@ -1129,7 +1137,7 @@ INSERT INTO `pekerjaan` (`pekerjaan_id`, `user_kode`, `lokasi_id`, `pekerjaan_na
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `perusahaan`
+-- Table structure for table `perusahaan`
 --
 
 CREATE TABLE `perusahaan` (
@@ -1142,7 +1150,7 @@ CREATE TABLE `perusahaan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `perusahaan`
+-- Dumping data for table `perusahaan`
 --
 
 INSERT INTO `perusahaan` (`perusahaan_id`, `user_kode`, `lokasi_id`, `perusahaan_nama`, `perusahaan_tel`, `perusahaan_bidang`) VALUES
@@ -1151,7 +1159,7 @@ INSERT INTO `perusahaan` (`perusahaan_id`, `user_kode`, `lokasi_id`, `perusahaan
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `prodi`
+-- Table structure for table `prodi`
 --
 
 CREATE TABLE `prodi` (
@@ -1161,7 +1169,7 @@ CREATE TABLE `prodi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `prodi`
+-- Dumping data for table `prodi`
 --
 
 INSERT INTO `prodi` (`prodi_id`, `fakultas_id`, `prodi_nama`) VALUES
@@ -1210,7 +1218,7 @@ INSERT INTO `prodi` (`prodi_id`, `fakultas_id`, `prodi_nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `slide`
+-- Table structure for table `slide`
 --
 
 CREATE TABLE `slide` (
@@ -1222,7 +1230,7 @@ CREATE TABLE `slide` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `slide`
+-- Dumping data for table `slide`
 --
 
 INSERT INTO `slide` (`slide_id`, `slide_judul`, `slide_ket`, `slide_gambar`, `slide_tanggal`) VALUES
@@ -1231,7 +1239,7 @@ INSERT INTO `slide` (`slide_id`, `slide_judul`, `slide_ket`, `slide_gambar`, `sl
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -1241,7 +1249,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_kode`, `user_password`, `user_role`) VALUES
@@ -1677,73 +1685,79 @@ INSERT INTO `user` (`user_kode`, `user_password`, `user_role`) VALUES
 ('10011481417028', '202cb962ac59075b964b07152d234b70', 'alumni'),
 ('10111001037', '202cb962ac59075b964b07152d234b70', 'alumni'),
 ('10111001057', '202cb962ac59075b964b07152d234b70', 'alumni'),
+('1212', '202cb962ac59075b964b07152d234b70', 'admin'),
 ('123', '202cb962ac59075b964b07152d234b70', 'admin'),
+('1241', '202cb962ac59075b964b07152d234b70', 'kajur'),
 ('225', '202cb962ac59075b964b07152d234b70', 'perusahaan'),
-('333', '202cb962ac59075b964b07152d234b70', 'kajur');
+('333', '202cb962ac59075b964b07152d234b70', 'kajur'),
+('4441', '202cb962ac59075b964b07152d234b70', 'admin'),
+('51251', '202cb962ac59075b964b07152d234b70', 'kajur'),
+('551', '202cb962ac59075b964b07152d234b70', 'admin'),
+('555555555', '202cb962ac59075b964b07152d234b70', 'alumni');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `alumni`
+-- Indexes for table `alumni`
 --
 ALTER TABLE `alumni`
   ADD KEY `prodi_id` (`prodi_id`),
   ADD KEY `alumni_nim` (`alumni_nim`);
 
 --
--- Indeks untuk tabel `artikel`
+-- Indexes for table `artikel`
 --
 ALTER TABLE `artikel`
   ADD PRIMARY KEY (`artikel_id`);
 
 --
--- Indeks untuk tabel `artikel_views`
+-- Indexes for table `artikel_views`
 --
 ALTER TABLE `artikel_views`
   ADD PRIMARY KEY (`views_id`),
   ADD KEY `artikel_id` (`artikel_id`);
 
 --
--- Indeks untuk tabel `detail_user`
+-- Indexes for table `detail_user`
 --
 ALTER TABLE `detail_user`
   ADD KEY `detail_kode` (`detail_kode`);
 
 --
--- Indeks untuk tabel `fakultas`
+-- Indexes for table `fakultas`
 --
 ALTER TABLE `fakultas`
   ADD PRIMARY KEY (`fakultas_id`);
 
 --
--- Indeks untuk tabel `gallery`
+-- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`gallery_id`);
 
 --
--- Indeks untuk tabel `kuisioner`
+-- Indexes for table `kuisioner`
 --
 ALTER TABLE `kuisioner`
   ADD PRIMARY KEY (`kuisioner_id`),
   ADD KEY `kuisioner_akses` (`kuisioner_akses`);
 
 --
--- Indeks untuk tabel `lokasi`
+-- Indexes for table `lokasi`
 --
 ALTER TABLE `lokasi`
   ADD PRIMARY KEY (`lokasi_id`);
 
 --
--- Indeks untuk tabel `partner`
+-- Indexes for table `partner`
 --
 ALTER TABLE `partner`
   ADD PRIMARY KEY (`partner_id`);
 
 --
--- Indeks untuk tabel `pekerjaan`
+-- Indexes for table `pekerjaan`
 --
 ALTER TABLE `pekerjaan`
   ADD PRIMARY KEY (`pekerjaan_id`),
@@ -1751,7 +1765,7 @@ ALTER TABLE `pekerjaan`
   ADD KEY `lokasi_id` (`lokasi_id`);
 
 --
--- Indeks untuk tabel `perusahaan`
+-- Indexes for table `perusahaan`
 --
 ALTER TABLE `perusahaan`
   ADD PRIMARY KEY (`perusahaan_id`),
@@ -1759,133 +1773,133 @@ ALTER TABLE `perusahaan`
   ADD KEY `lokasi_id` (`lokasi_id`);
 
 --
--- Indeks untuk tabel `prodi`
+-- Indexes for table `prodi`
 --
 ALTER TABLE `prodi`
   ADD PRIMARY KEY (`prodi_id`),
   ADD KEY `fakultas_id` (`fakultas_id`);
 
 --
--- Indeks untuk tabel `slide`
+-- Indexes for table `slide`
 --
 ALTER TABLE `slide`
   ADD PRIMARY KEY (`slide_id`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_kode`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `artikel`
+-- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `artikel_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `artikel_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `artikel_views`
+-- AUTO_INCREMENT for table `artikel_views`
 --
 ALTER TABLE `artikel_views`
   MODIFY `views_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `fakultas`
+-- AUTO_INCREMENT for table `fakultas`
 --
 ALTER TABLE `fakultas`
   MODIFY `fakultas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT untuk tabel `gallery`
+-- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
   MODIFY `gallery_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `kuisioner`
+-- AUTO_INCREMENT for table `kuisioner`
 --
 ALTER TABLE `kuisioner`
   MODIFY `kuisioner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `lokasi`
+-- AUTO_INCREMENT for table `lokasi`
 --
 ALTER TABLE `lokasi`
   MODIFY `lokasi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `partner`
+-- AUTO_INCREMENT for table `partner`
 --
 ALTER TABLE `partner`
   MODIFY `partner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `pekerjaan`
+-- AUTO_INCREMENT for table `pekerjaan`
 --
 ALTER TABLE `pekerjaan`
   MODIFY `pekerjaan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `perusahaan`
+-- AUTO_INCREMENT for table `perusahaan`
 --
 ALTER TABLE `perusahaan`
   MODIFY `perusahaan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `slide`
+-- AUTO_INCREMENT for table `slide`
 --
 ALTER TABLE `slide`
   MODIFY `slide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `alumni`
+-- Constraints for table `alumni`
 --
 ALTER TABLE `alumni`
   ADD CONSTRAINT `alumni_ibfk_1` FOREIGN KEY (`prodi_id`) REFERENCES `prodi` (`prodi_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `alumni_ibfk_2` FOREIGN KEY (`alumni_nim`) REFERENCES `user` (`user_kode`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `artikel_views`
+-- Constraints for table `artikel_views`
 --
 ALTER TABLE `artikel_views`
   ADD CONSTRAINT `artikel_views_ibfk_1` FOREIGN KEY (`artikel_id`) REFERENCES `artikel` (`artikel_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `detail_user`
+-- Constraints for table `detail_user`
 --
 ALTER TABLE `detail_user`
   ADD CONSTRAINT `detail_user_ibfk_1` FOREIGN KEY (`detail_kode`) REFERENCES `user` (`user_kode`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `kuisioner`
+-- Constraints for table `kuisioner`
 --
 ALTER TABLE `kuisioner`
   ADD CONSTRAINT `kuisioner_ibfk_1` FOREIGN KEY (`kuisioner_akses`) REFERENCES `prodi` (`prodi_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `pekerjaan`
+-- Constraints for table `pekerjaan`
 --
 ALTER TABLE `pekerjaan`
   ADD CONSTRAINT `pekerjaan_ibfk_1` FOREIGN KEY (`user_kode`) REFERENCES `user` (`user_kode`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pekerjaan_ibfk_2` FOREIGN KEY (`lokasi_id`) REFERENCES `lokasi` (`lokasi_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `perusahaan`
+-- Constraints for table `perusahaan`
 --
 ALTER TABLE `perusahaan`
   ADD CONSTRAINT `perusahaan_ibfk_1` FOREIGN KEY (`user_kode`) REFERENCES `user` (`user_kode`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `perusahaan_ibfk_2` FOREIGN KEY (`lokasi_id`) REFERENCES `lokasi` (`lokasi_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `prodi`
+-- Constraints for table `prodi`
 --
 ALTER TABLE `prodi`
   ADD CONSTRAINT `prodi_ibfk_1` FOREIGN KEY (`fakultas_id`) REFERENCES `fakultas` (`fakultas_id`) ON DELETE CASCADE ON UPDATE CASCADE;
